@@ -1,7 +1,7 @@
 {
   "name": "pc-audio-streamer",
   "version": "1.0.0",
-  "description": "Stream PC audio to mobile via WebSockets",
+  "description": "Transmision de audio de PC a celular",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

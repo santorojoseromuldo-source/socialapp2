@@ -1,38 +1,28 @@
-# PC Audio Streamer
+# PC Audio Streamer (Uso Hogareño)
 
-Esta aplicación permite capturar el audio de tu PC con Windows y transmitirlo a tu celular a través de una red local o VPN (como PDAnet).
+Este programa captura el audio de tu PC y lo manda a tu celular para que lo escuches en un parlante Bluetooth. Funciona perfecto con **PDAnet**, **VPN** o tu red **Wi-Fi**.
 
-## Requisitos
+## Pasos para usarlo:
 
-1. **ffmpeg**: Debes tener instalado `ffmpeg` en tu PC.
-   - Puedes descargarlo de [ffmpeg.org](https://ffmpeg.org/download.html).
-   - Asegúrate de agregar la carpeta `bin` de ffmpeg a tu variable de entorno PATH.
-2. **Node.js**: Instalado en tu PC.
+1. **PRIMERA VEZ:** Haz doble clic en el archivo `instalar.bat`.
+   - Esto descargará lo necesario (ffmpeg) e instalará el programa.
+   - Si Windows te pregunta, dale permiso para descargar.
 
-## Configuración de Audio en Windows
+2. **PARA USARLO:** Haz doble clic en el archivo `run.bat`.
+   - Se abrirá una ventana negra con letras blancas.
+   - Busca donde dice algo como: `http://192.168.49.1:4000`.
 
-Para capturar el audio del sistema, usamos WASAPI loopback. Necesitas saber el nombre de tu dispositivo de salida.
+3. **EN EL CELULAR:**
+   - Abre el navegador de tu celular (Chrome, Safari, etc).
+   - Escribe la dirección que viste arriba (ejemplo: `192.168.49.1:4000`).
+   - Toca el botón azul **"Conectar / Reproducir"**.
+   - ¡Listo! Deberías escuchar el audio de tu PC en el celular.
 
-1. Abre una terminal y ejecuta:
-   ```bash
-   ffmpeg -list_devices true -f dshow -i dummy
-   ```
-2. Busca en la sección "[dshow @ ...]" los nombres de tus dispositivos bajo "DirectShow audio devices".
-3. Busca tu parlante o salida de audio (ej: "Speakers (Realtek High Definition Audio)").
+## Problemas Comunes:
 
-## Ejecución
+- **No se escucha nada:** Asegúrate de que tu PC esté reproduciendo música o algún sonido.
+- **El celular no conecta:** Revisa que el celular esté conectado a la PC (por PDAnet o el mismo Wi-Fi).
+- **Error de ffmpeg:** Ejecuta de nuevo el `instalar.bat`.
 
-1. Ejecuta el archivo `run.bat` o usa:
-   ```bash
-   npm start
-   ```
-2. La terminal mostrará una dirección IP (ej: `http://192.168.49.1:4000`).
-3. Abre esa dirección en el navegador de tu celular.
-4. Presiona **"Conectar / Reproducir"** en el celular.
-
-## Notas sobre PDAnet / VPN / Latencia
-
-- **Red Local:** Asegúrate de que el celular esté conectado a la PC mediante PDAnet o que ambos estén en la misma red Wi-Fi.
-- **IP:** Usa la dirección IP que muestra el programa al iniciar. Si usas PDAnet, suele ser `192.168.49.1`.
-- **Latencia:** La aplicación usa PCM sin comprimir para que el retraso sea mínimo (milisegundos). La calidad depende de la estabilidad de tu conexión USB/Wi-Fi.
-- **Bluetooth:** Una vez que el audio suene en tu celular, simplemente conéctalo a tu parlante Bluetooth.
+---
+*Nota: Este programa es solo para uso personal. Requiere tener Node.js instalado en la PC.*
