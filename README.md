@@ -28,10 +28,11 @@ Para capturar el audio del sistema, usamos WASAPI loopback. Necesitas saber el n
    ```
 2. La terminal mostrará una dirección IP (ej: `http://192.168.49.1:4000`).
 3. Abre esa dirección en el navegador de tu celular.
-4. Presiona "Conectar / Reproducir" en el celular.
+4. Presiona **"Conectar / Reproducir"** en el celular.
 
-## Notas sobre PDAnet / VPN
+## Notas sobre PDAnet / VPN / Latencia
 
-- Asegúrate de que el celular esté conectado a la PC mediante PDAnet.
-- Usa la dirección IP que asigna PDAnet a la PC (usualmente empieza con `192.168.49.x`).
-- Al estar en la misma red local virtual, el audio debería transmitirse sin problemas.
+- **Red Local:** Asegúrate de que el celular esté conectado a la PC mediante PDAnet o que ambos estén en la misma red Wi-Fi.
+- **IP:** Usa la dirección IP que muestra el programa al iniciar. Si usas PDAnet, suele ser `192.168.49.1`.
+- **Latencia:** La aplicación usa PCM sin comprimir para que el retraso sea mínimo (milisegundos). La calidad depende de la estabilidad de tu conexión USB/Wi-Fi.
+- **Bluetooth:** Una vez que el audio suene en tu celular, simplemente conéctalo a tu parlante Bluetooth.
