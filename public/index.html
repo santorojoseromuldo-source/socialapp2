@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Audio Streamer</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 90%;
+            width: 400px;
+        }
+        h1 { margin-bottom: 1rem; font-size: 1.5rem; }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 100%;
+        }
+        button:hover { background-color: #0056b3; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        .status {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #65676b;
+        }
+        .status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin-right: 5px;
+        }
+        .status-dot.active { background-color: #28a745; animation: pulse 1.5s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>PC Audio Streamer</h1>
+        <p>Presiona el botón para empezar a escuchar el audio de tu PC.</p>
+        <button id="playBtn">Conectar / Reproducir</button>
+        <div class="status">
+            <span id="dot" class="status-dot"></span>
+            <span id="statusText">Desconectado</span>
+        </div>
+        <p style="font-size: 0.8rem; color: #888; margin-top: 1rem;">
+            Si usas <b>ngrok</b> y ves una advertencia, haz clic en <b>"Visit Site"</b> para habilitar la transmisión.
+        </p>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
