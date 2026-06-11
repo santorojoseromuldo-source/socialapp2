@@ -30,22 +30,14 @@ class LoginView extends StatelessWidget {
             TextField(
               controller: _emailController,
               style: const TextStyle(color: Colors.white),
-              decoration: const InputDecoration(
-                labelText: 'Email',
-                labelStyle: TextStyle(color: Colors.grey),
-                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blueGrey)),
-              ),
+              decoration: const InputDecoration(labelText: 'Email'),
             ),
             const SizedBox(height: 20),
             TextField(
               controller: _passwordController,
               obscureText: true,
               style: const TextStyle(color: Colors.white),
-              decoration: const InputDecoration(
-                labelText: 'Password',
-                labelStyle: TextStyle(color: Colors.grey),
-                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.blueGrey)),
-              ),
+              decoration: const InputDecoration(labelText: 'Password'),
             ),
             const SizedBox(height: 40),
             viewModel.isLoading

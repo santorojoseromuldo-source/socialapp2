@@ -35,11 +35,6 @@ class DeliveryPlusTheme {
           borderRadius: BorderRadius.circular(8),
         ),
       ),
-      textTheme: const TextTheme(
-        displayLarge: TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold),
-        bodyLarge: TextStyle(color: Colors.white),
-        bodyMedium: TextStyle(color: Colors.white70),
-      ),
     );
   }
 }
