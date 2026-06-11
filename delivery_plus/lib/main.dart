@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'viewmodels/login_viewmodel.dart';
+import 'viewmodels/dashboard_viewmodel.dart';
 import 'views/login_view.dart';
 import 'theme.dart';
 
@@ -9,6 +10,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => LoginViewModel()),
+        ChangeNotifierProvider(create: (_) => DashboardViewModel()),
       ],
       child: const DeliveryPlusApp(),
     ),
