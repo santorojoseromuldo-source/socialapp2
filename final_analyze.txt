@@ -1,0 +1,11 @@
+Analyzing delivery_plus...
+
+warning • Unused import: '../models/user.dart' • lib/services/api_service.dart:3:8 • unused_import
+warning • Unused import: '../models/order.dart' • lib/services/api_service.dart:5:8 • unused_import
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:19:7 • avoid_print
+warning • Unused import: '../models/user.dart' • lib/services/auth_service.dart:2:8 • unused_import
+warning • Unused import: 'dart:convert' • lib/services/weather_service.dart:1:8 • unused_import
+warning • Unused import: 'package:http/http.dart' • lib/services/weather_service.dart:2:8 • unused_import
+warning • Unused import: 'package:flutter/material.dart' • test/widget_test.dart:1:8 • unused_import
+
+7 issues found. (ran in 2.0s)
